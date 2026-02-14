@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        :root {
+            --primary-bg: #ffffff;
+            --secondary-bg: #f4f4f9;
+            --text-color: #333;
+            --accent-color: #007bff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-bg);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        section {
+            padding: 3rem 10%;
+        }
+
+        .hero {
+            background: var(--secondary-bg);
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-card {
+            background: var(--primary-bg);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project-card {
+            flex: 1 1 calc(33.333% - 20px);
+            background: var(--secondary-bg);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .project-card { flex: 1 1 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Hi, I'm a Tech Enthusiast & Student</h2>
+        <p>Building solutions in AI, Software Dev, and Quant Finance.</p>
+    </section>
+
+    <section id="about">
+        <h3>About Me</h3>
+        <p>I am a first-year undergraduate student at IIT Kharagpur. I am passionate about how logic and mathematics drive technology, specifically in the realms of machine learning and blockchain.</p>
+    </section>
+
+    <section id="skills">
+        <h3>Technical Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-card">Python (ML/DS)</div>
+            <div class="skill-card">C++</div>
+            <div class="skill-card">Linear Algebra</div>
+            <div class="skill-card">Data Structures</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h3>Recent Projects</h3>
+        <div class="projects-container">
+            <div class="project-card">
+                <h4>ML Classifier</h4>
+                <p>Implementing logistic regression models for data classification tasks.</p>
+            </div>
+            <div class="project-card">
+                <h4>Wave Physics Simulator</h4>
+                <p>A tool to visualize coupled oscillations and wave propagation.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Let's connect!</p>
+        <p>Email: example@itkgp.ac.in | <a href="#" style="color: #007bff;">LinkedIn</a></p>
+    </footer>
+
+</body>
+</html>
